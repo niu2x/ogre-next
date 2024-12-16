@@ -40,6 +40,7 @@ THE SOFTWARE.
 #if !OGRE_NO_JSON
 #    include "OgreResourceGroupManager.h"
 #endif
+#include "OgreResourceGroupManager.h"
 
 #include <fstream>
 
