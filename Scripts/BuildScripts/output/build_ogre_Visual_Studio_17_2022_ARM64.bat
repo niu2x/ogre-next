@@ -3,8 +3,8 @@
 SETLOCAL
 
 set OGRE_BRANCH_NAME=master
-set GENERATOR="Visual Studio 15 2017"
-set PLATFORM=x64
+set GENERATOR="Visual Studio 17 2022"
+set PLATFORM=ARM64
 
 set CMAKE_BIN_x86="C:\Program Files (x86)\CMake\bin\cmake.exe"
 set CMAKE_BIN_x64="C:\Program Files\CMake\bin\cmake.exe"
