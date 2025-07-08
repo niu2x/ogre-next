@@ -30,6 +30,7 @@ set(OGRE_SET_PROFILING 0)
 set(OGRE_SET_PROFILING_EXHAUSTIVE 0)
 set(OGRE_SET_DISABLE_FINE_LIGHT_MASK_GRANULARITY 0)
 set(OGRE_SET_DISABLE_ZIP 0)
+set(OGRE_SET_NODE_INHERIT_TRANSFORM 0)
 
 configure_file(${OGRE_TEMPLATES_DIR}/OgreBuildSettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/OgreBuildSettings.h @ONLY)
 
@@ -129,6 +130,40 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreHlmsLowLevelDatablock.cpp
     ../OgreMain/src/OgreHlmsManager.cpp
     ../OgreMain/src/OgreHlmsSamplerblock.cpp
+    ../OgreMain/src/OgreImage2.cpp
+    ../OgreMain/src/OgreImageDownsampler.cpp
+    ../OgreMain/src/OgreInternalCubemapProbe.cpp
+    ../OgreMain/src/OgreItem.cpp
+    ../OgreMain/src/OgreKeyFrame.cpp
+    ../OgreMain/src/OgreLight.cpp
+    ../OgreMain/src/OgreLodStrategy.cpp
+    ../OgreMain/src/OgreLodStrategyManager.cpp
+    ../OgreMain/src/OgreLwString.cpp
+    ../OgreMain/src/OgreManualObject.cpp
+    ../OgreMain/src/OgreManualObject2.cpp
+    ../OgreMain/src/OgreMaterial.cpp
+    ../OgreMain/src/OgreMaterialManager.cpp
+    ../OgreMain/src/OgreMaterialSerializer.cpp
+    ../OgreMain/src/OgreMath.cpp
+    ../OgreMain/src/OgreMatrix3.cpp
+    ../OgreMain/src/OgreMatrix4.cpp
+    ../OgreMain/src/OgreMemoryTracker.cpp
+    ../OgreMain/src/OgreMemoryTrackAlloc.cpp
+    ../OgreMain/src/OgreMesh.cpp
+    ../OgreMain/src/OgreMesh2.cpp
+    ../OgreMain/src/OgreMesh2Serializer.cpp
+    ../OgreMain/src/OgreMesh2SerializerImpl.cpp
+    ../OgreMain/src/OgreMeshManager.cpp
+    ../OgreMain/src/OgreMeshManager2.cpp
+    ../OgreMain/src/OgreMeshSerializer.cpp
+    ../OgreMain/src/OgreMeshSerializerImpl.cpp
+    ../OgreMain/src/OgreMovableObject.cpp
+    ../OgreMain/src/OgreMovablePlane.cpp
+    ../OgreMain/src/OgreNode.cpp
+    ../OgreMain/src/OgreNumerics.cpp
+    ../OgreMain/src/OgreObjCmdBuffer.cpp
+    ../OgreMain/src/OgreOfflineProfiler.cpp
+    # ../OgreMain/src/OgreOfflineProfiler.cpp
 )
 
 target_include_directories(OgreCore PUBLIC
