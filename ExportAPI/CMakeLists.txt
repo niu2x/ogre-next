@@ -163,7 +163,14 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreNumerics.cpp
     ../OgreMain/src/OgreObjCmdBuffer.cpp
     ../OgreMain/src/OgreOfflineProfiler.cpp
-    # ../OgreMain/src/OgreOfflineProfiler.cpp
+    ../OgreMain/src/OgreOITDCodec.cpp
+    ../OgreMain/src/OgreOldBone.cpp
+    ../OgreMain/src/OgreOldNode.cpp
+    ../OgreMain/src/OgreOldSkeletonInstance.cpp
+    ../OgreMain/src/OgreOldSkeletonManager.cpp
+    ../OgreMain/src/OgreOptimisedUtil.cpp
+    ../OgreMain/src/OgreOptimisedUtilGeneral.cpp
+    ../OgreMain/src/OgreOptimisedUtilSSE.cpp
 )
 
 target_include_directories(OgreCore PUBLIC
