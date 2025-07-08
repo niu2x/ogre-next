@@ -29,6 +29,7 @@ set(OGRE_SET_DISABLE_VIEWPORT_ORIENTATIONMODE 0)
 set(OGRE_SET_PROFILING 0)
 set(OGRE_SET_PROFILING_EXHAUSTIVE 0)
 set(OGRE_SET_DISABLE_FINE_LIGHT_MASK_GRANULARITY 0)
+set(OGRE_SET_DISABLE_ZIP 0)
 
 configure_file(${OGRE_TEMPLATES_DIR}/OgreBuildSettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/OgreBuildSettings.h @ONLY)
 
@@ -84,6 +85,16 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreDDSCodec2.cpp
     ../OgreMain/src/OgreDecal.cpp
     ../OgreMain/src/OgreDefaultHardwareBufferManager.cpp
+    ../OgreMain/src/OgreDefaultSceneQueries.cpp
+    ../OgreMain/src/OgreDeflate.cpp
+    ../OgreMain/src/OgreDepthBuffer.cpp
+    ../OgreMain/src/OgreDescriptorSetTexture.cpp
+    ../OgreMain/src/OgreDescriptorSetUav.cpp
+    ../OgreMain/src/OgreDistanceLodStrategy.cpp
+    ../OgreMain/src/OgreDualQuaternion.cpp
+    ../OgreMain/src/OgreDynLib.cpp
+    ../OgreMain/src/OgreDynLibManager.cpp
+    ../OgreMain/src/OgreEdgeListBuilder.cpp
 )
 
 target_include_directories(OgreCore PUBLIC
