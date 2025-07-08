@@ -26,6 +26,9 @@ set(OGRE_SET_DISABLE_JSON 0)
 set(OGRE_SET_ENABLE_LIGHT_OBB_RESTRAINT 0)
 set(OGRE_SET_DISABLE_MESHLOD 0)
 set(OGRE_SET_DISABLE_VIEWPORT_ORIENTATIONMODE 0)
+set(OGRE_SET_PROFILING 0)
+set(OGRE_SET_PROFILING_EXHAUSTIVE 0)
+set(OGRE_SET_DISABLE_FINE_LIGHT_MASK_GRANULARITY 0)
 
 configure_file(${OGRE_TEMPLATES_DIR}/OgreBuildSettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/OgreBuildSettings.h @ONLY)
 
@@ -66,6 +69,21 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreAutoParamDataSource.cpp
     ../OgreMain/src/OgreAxisAlignedBox.cpp
     ../OgreMain/src/OgreBillboard.cpp
+    ../OgreMain/src/OgreBillboardChain.cpp
+    ../OgreMain/src/OgreBillboardParticleRenderer.cpp
+    ../OgreMain/src/OgreBillboardSet.cpp
+    ../OgreMain/src/OgreCamera.cpp
+    ../OgreMain/src/OgreCodec.cpp
+    ../OgreMain/src/OgreColourValue.cpp
+    ../OgreMain/src/OgreCommon.cpp
+    ../OgreMain/src/OgreConfigFile.cpp
+    ../OgreMain/src/OgreConstBufferPool.cpp
+    ../OgreMain/src/OgreControllerManager.cpp
+    ../OgreMain/src/OgreConvexBody.cpp
+    ../OgreMain/src/OgreDataStream.cpp
+    ../OgreMain/src/OgreDDSCodec2.cpp
+    ../OgreMain/src/OgreDecal.cpp
+    ../OgreMain/src/OgreDefaultHardwareBufferManager.cpp
 )
 
 target_include_directories(OgreCore PUBLIC
