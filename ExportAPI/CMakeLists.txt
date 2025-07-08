@@ -23,11 +23,29 @@ set(OGRE_SET_CONTAINERS_USE_ALLOCATOR 0)
 set(OGRE_SET_IDSTRING_ALWAYS_READABLE 0)
 set(OGRE_SET_ASSERT_MODE 1)
 set(OGRE_SET_DISABLE_JSON 0)
+set(OGRE_SET_ENABLE_LIGHT_OBB_RESTRAINT 0)
+set(OGRE_SET_DISABLE_MESHLOD 0)
 
 configure_file(${OGRE_TEMPLATES_DIR}/OgreBuildSettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/OgreBuildSettings.h @ONLY)
 
 add_library(OgreCore STATIC "")
-# add_library(MiniOgreRT SHARED "")
+add_library(MiniOgreRT SHARED "")
+
+set_target_properties(OgreCore PROPERTIES 
+    CXX_STANDARD 17
+    C_VISIBILITY_PRESET hidden
+    CXX_VISIBILITY_PRESET hidden
+    VISIBILITY_INLINES_HIDDEN ON
+    POSITION_INDEPENDENT_CODE ON
+)
+
+set_target_properties(MiniOgreRT PROPERTIES 
+    CXX_STANDARD 17
+    C_VISIBILITY_PRESET hidden
+    CXX_VISIBILITY_PRESET hidden
+    VISIBILITY_INLINES_HIDDEN ON
+    POSITION_INDEPENDENT_CODE ON
+)
 
 target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreAbiUtils.cpp
@@ -36,11 +54,23 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreAnimation.cpp
     ../OgreMain/src/OgreAnimationState.cpp
     ../OgreMain/src/OgreAnimationTrack.cpp
+    ../OgreMain/src/OgreAny.cpp
+    ../OgreMain/src/OgreArchive.cpp
+    ../OgreMain/src/OgreArchiveManager.cpp
+    ../OgreMain/src/OgreAssert.cpp
+    ../OgreMain/src/OgreASTCCodec.cpp
 )
 
-target_include_directories(OgreCore PRIVATE
+target_include_directories(OgreCore PUBLIC
     ${CMAKE_CURRENT_BINARY_DIR}/include/
     ../OgreMain/include
     ../OgreMain/include/Math/Array
 )
 
+
+target_sources(MiniOgreRT PRIVATE
+    src/MiniOgre.cpp
+)
+
+target_include_directories(MiniOgreRT PRIVATE include/)
+target_link_libraries(MiniOgreRT PRIVATE OgreCore)
