@@ -95,6 +95,40 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreDynLib.cpp
     ../OgreMain/src/OgreDynLibManager.cpp
     ../OgreMain/src/OgreEdgeListBuilder.cpp
+    ../OgreMain/src/OgreEntity.cpp
+    ../OgreMain/src/OgreETCCodec.cpp
+    ../OgreMain/src/OgreException.cpp
+    ../OgreMain/src/OgreExternalTextureSource.cpp
+    ../OgreMain/src/OgreExternalTextureSourceManager.cpp
+    ../OgreMain/src/OgreFileSystem.cpp
+    ../OgreMain/src/OgreForward3D.cpp
+    ../OgreMain/src/OgreForwardClustered.cpp
+    ../OgreMain/src/OgreForwardPlusBase.cpp
+    ../OgreMain/src/OgreFreeImageCodec2.cpp
+    ../OgreMain/src/OgreFrustum.cpp
+    ../OgreMain/src/OgreGpuProgram.cpp
+    ../OgreMain/src/OgreGpuProgramManager.cpp
+    ../OgreMain/src/OgreGpuProgramParams.cpp
+    ../OgreMain/src/OgreGpuProgramUsage.cpp
+    ../OgreMain/src/OgreGpuResource.cpp
+    ../OgreMain/src/OgreHardwareBufferManager.cpp
+    ../OgreMain/src/OgreHardwareIndexBuffer.cpp
+    ../OgreMain/src/OgreHardwareOcclusionQuery.cpp
+    ../OgreMain/src/OgreHardwareVertexBuffer.cpp
+    ../OgreMain/src/OgreHiddenAreaMeshVr.cpp
+    ../OgreMain/src/OgreHighLevelGpuProgram.cpp
+    ../OgreMain/src/OgreHighLevelGpuProgramManager.cpp
+    ../OgreMain/src/OgreHlms.cpp
+    ../OgreMain/src/OgreHlmsCompute.cpp
+    ../OgreMain/src/OgreHlmsComputeJob.cpp
+    ../OgreMain/src/OgreHlmsDatablock.cpp
+    ../OgreMain/src/OgreHlmsDiskCache.cpp
+    ../OgreMain/src/OgreHlmsJson.cpp
+    ../OgreMain/src/OgreHlmsJsonCompute.cpp
+    ../OgreMain/src/OgreHlmsLowLevel.cpp
+    ../OgreMain/src/OgreHlmsLowLevelDatablock.cpp
+    ../OgreMain/src/OgreHlmsManager.cpp
+    ../OgreMain/src/OgreHlmsSamplerblock.cpp
 )
 
 target_include_directories(OgreCore PUBLIC
