@@ -25,6 +25,7 @@ set(OGRE_SET_ASSERT_MODE 1)
 set(OGRE_SET_DISABLE_JSON 0)
 set(OGRE_SET_ENABLE_LIGHT_OBB_RESTRAINT 0)
 set(OGRE_SET_DISABLE_MESHLOD 0)
+set(OGRE_SET_DISABLE_VIEWPORT_ORIENTATIONMODE 0)
 
 configure_file(${OGRE_TEMPLATES_DIR}/OgreBuildSettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/OgreBuildSettings.h @ONLY)
 
@@ -59,6 +60,12 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreArchiveManager.cpp
     ../OgreMain/src/OgreAssert.cpp
     ../OgreMain/src/OgreASTCCodec.cpp
+    ../OgreMain/src/OgreAssert.cpp
+    ../OgreMain/src/OgreAsyncTextureTicket.cpp
+    ../OgreMain/src/OgreAtomicScalar.cpp
+    ../OgreMain/src/OgreAutoParamDataSource.cpp
+    ../OgreMain/src/OgreAxisAlignedBox.cpp
+    ../OgreMain/src/OgreBillboard.cpp
 )
 
 target_include_directories(OgreCore PUBLIC
