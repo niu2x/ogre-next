@@ -31,6 +31,13 @@ set(OGRE_SET_PROFILING_EXHAUSTIVE 0)
 set(OGRE_SET_DISABLE_FINE_LIGHT_MASK_GRANULARITY 0)
 set(OGRE_SET_DISABLE_ZIP 0)
 set(OGRE_SET_NODE_INHERIT_TRANSFORM 0)
+set(OGRE_SET_RENDERDOC_INTEGRATION 1)
+set(OGRE_SET_DISABLE_DDS 0)
+set(OGRE_SET_DISABLE_STBI 0)
+set(OGRE_SET_DISABLE_FREEIMAGE 0)
+set(OGRE_SET_DISABLE_PVRTC 0)
+set(OGRE_SET_DISABLE_ETC 0)
+set(OGRE_SET_DISABLE_ASTC 0)
 
 configure_file(${OGRE_TEMPLATES_DIR}/OgreBuildSettings.h.in ${CMAKE_CURRENT_BINARY_DIR}/include/OgreBuildSettings.h @ONLY)
 
@@ -171,6 +178,109 @@ target_sources(OgreCore PRIVATE
     ../OgreMain/src/OgreOptimisedUtil.cpp
     ../OgreMain/src/OgreOptimisedUtilGeneral.cpp
     ../OgreMain/src/OgreOptimisedUtilSSE.cpp
+    ../OgreMain/src/OgreParticle.cpp
+    ../OgreMain/src/OgreParticleEmitter.cpp
+    ../OgreMain/src/OgreParticleEmitterCommands.cpp
+    ../OgreMain/src/OgreParticleIterator.cpp
+    ../OgreMain/src/OgreParticleSystem.cpp
+    ../OgreMain/src/OgreParticleSystemManager.cpp
+    ../OgreMain/src/OgrePass.cpp
+    ../OgreMain/src/OgrePatchMesh.cpp
+    ../OgreMain/src/OgrePatchSurface.cpp
+    ../OgreMain/src/OgrePixelCountLodStrategy.cpp
+    ../OgreMain/src/OgrePixelFormatGpuUtils.cpp
+    ../OgreMain/src/OgrePlane.cpp
+    ../OgreMain/src/OgrePlatformInformation.cpp
+    ../OgreMain/src/OgrePolygon.cpp
+    ../OgreMain/src/OgrePose.cpp
+    ../OgreMain/src/OgrePrecompiledHeaders.cpp
+    ../OgreMain/src/OgrePredefinedControllers.cpp
+    ../OgreMain/src/OgrePrefabFactory.cpp
+    ../OgreMain/src/OgreProfiler.cpp
+    ../OgreMain/src/OgrePsoCacheHelper.cpp
+    ../OgreMain/src/OgrePVRTCCodec.cpp
+    ../OgreMain/src/OgreQuaternion.cpp
+    ../OgreMain/src/OgreRadialDensityMask.cpp
+    ../OgreMain/src/OgreRectangle2D2.cpp
+    ../OgreMain/src/OgreRectangle2D.cpp
+    ../OgreMain/src/OgreRenderable.cpp
+    ../OgreMain/src/OgreRenderPassDescriptor.cpp
+    ../OgreMain/src/OgreRenderQueue.cpp
+    ../OgreMain/src/OgreRenderSystemCapabilities.cpp
+    ../OgreMain/src/OgreRenderSystemCapabilitiesManager.cpp
+    ../OgreMain/src/OgreRenderSystemCapabilitiesSerializer.cpp
+    ../OgreMain/src/OgreRenderSystem.cpp
+    ../OgreMain/src/OgreResourceBackgroundQueue.cpp
+    ../OgreMain/src/OgreResource.cpp
+    ../OgreMain/src/OgreResourceGroupManager.cpp
+    ../OgreMain/src/OgreResourceManager.cpp
+    ../OgreMain/src/OgreResourceTransition.cpp
+    ../OgreMain/src/OgreRibbonTrail.cpp
+    ../OgreMain/src/OgreRoot.cpp
+    ../OgreMain/src/OgreRootLayout.cpp
+    ../OgreMain/src/OgreRotationSpline.cpp
+    ../OgreMain/src/OgreSceneManager.cpp
+    ../OgreMain/src/OgreSceneManagerEnumerator.cpp
+    ../OgreMain/src/OgreSceneNode.cpp
+    ../OgreMain/src/OgreSceneQuery.cpp
+    ../OgreMain/src/OgreScriptCompiler.cpp
+    ../OgreMain/src/OgreScriptLexer.cpp
+    ../OgreMain/src/OgreScriptParser.cpp
+    ../OgreMain/src/OgreScriptTranslator.cpp
+    ../OgreMain/src/OgreSearchOps.cpp
+    ../OgreMain/src/OgreSerializer.cpp
+    ../OgreMain/src/OgreShaderParams.cpp
+    ../OgreMain/src/OgreShadowCameraSetupConcentric.cpp
+    ../OgreMain/src/OgreShadowCameraSetup.cpp
+    ../OgreMain/src/OgreShadowCameraSetupFocused.cpp
+    ../OgreMain/src/OgreShadowCameraSetupPlaneOptimal.cpp
+    ../OgreMain/src/OgreShadowCameraSetupPSSM.cpp
+    ../OgreMain/src/OgreSimpleRenderable.cpp
+    ../OgreMain/src/OgreSimpleSpline.cpp
+    ../OgreMain/src/OgreSkeleton.cpp
+    ../OgreMain/src/OgreSkeletonSerializer.cpp
+    ../OgreMain/src/OgreSmallVector.cpp
+    ../OgreMain/src/OgreStagingTextureBufferImpl.cpp
+    ../OgreMain/src/OgreStagingTexture.cpp
+    ../OgreMain/src/OgreSTBICodec.cpp
+    ../OgreMain/src/OgreStreamSerialiser.cpp
+    ../OgreMain/src/OgreStringConverter.cpp
+    ../OgreMain/src/OgreString.cpp
+    ../OgreMain/src/OgreStringInterface.cpp
+    ../OgreMain/src/OgreSubEntity.cpp
+    ../OgreMain/src/OgreSubItem.cpp
+    ../OgreMain/src/OgreSubMesh2.cpp
+    ../OgreMain/src/OgreSubMesh.cpp
+    ../OgreMain/src/OgreTagPoint.cpp
+    ../OgreMain/src/OgreTangentSpaceCalc.cpp
+    ../OgreMain/src/OgreTechnique.cpp
+    ../OgreMain/src/OgreTextureBox.cpp
+    ../OgreMain/src/OgreTextureFilters.cpp
+    ../OgreMain/src/OgreTextureGpu.cpp
+    ../OgreMain/src/OgreTextureGpuManager.cpp
+    ../OgreMain/src/OgreTextureGpuManagerListener.cpp
+    ../OgreMain/src/OgreTextureUnitState.cpp
+    ../OgreMain/src/OgreUnifiedHighLevelGpuProgram.cpp
+    ../OgreMain/src/OgreUserObjectBindings.cpp
+    ../OgreMain/src/OgreUTFString.cpp
+    ../OgreMain/src/OgreVector2.cpp
+    ../OgreMain/src/OgreVector3.cpp
+    ../OgreMain/src/OgreVector4.cpp
+    ../OgreMain/src/OgreVertexFormatWarmUp.cpp
+    ../OgreMain/src/OgreVertexIndexData.cpp
+    ../OgreMain/src/OgreVertexShadowMapHelper.cpp
+    ../OgreMain/src/OgreViewport.cpp
+    ../OgreMain/src/OgreWindow.cpp
+    ../OgreMain/src/OgreWindowEventUtilities.cpp
+    ../OgreMain/src/OgreWireAabb.cpp
+    ../OgreMain/src/OgreWireBoundingBox.cpp
+    ../OgreMain/src/OgreWorkarounds.cpp
+    ../OgreMain/src/OgreWorkQueue.cpp
+    ../OgreMain/src/OgreZip.cpp
+
+
+
+
 )
 
 target_include_directories(OgreCore PUBLIC
