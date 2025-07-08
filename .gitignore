@@ -29,3 +29,5 @@ AndroidDependencies/
 Build/
 EmscriptenDependencies
 EmscriptenBuild
+
+build-ExportAPI/
